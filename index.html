@@ -1,14 +1,117 @@
 <html>
-  <head>
-    <p align="center"><b>Заголовок по центру</b></p>
-  </head>
 
-  <body>
-    <p>
-      ТЗ:
-      сверстать HTML страницу которая должна содержать заголовок который был бы всегда по центру, вне зависимости от ширины страницы. ниже заголовка должен быть блок с текстовой информацией – наполнение любое. 
-    </p>
-  </body>
+<head>
+  <title>Домашнее задание</title>
+  <h1 align="center"><b>Заголовок по центру</b></h1>
+</head>
+
+<body>
+  <p>
+    ТЗ:
+    сверстать HTML страницу которая должна содержать заголовок который был бы всегда по центру, вне зависимости от
+    ширины страницы. ниже заголовка должен быть блок с текстовой информацией – наполнение любое.
+  </p>
+  <h2 align="center">и вот даже второй заголовок</h2>
+  <p>
+    и еще немного текста
+  </p>
+  <h3>еще один заголовок</h3>
+  <h5>список ссылок</h5>
+  <p><a href="https://yandex.ru/sprav/3947163/edit/reviews">Отзывы на яндекс</a></p>
+  <p><a href="https://ovita.ru/info/aboutus/">О компании</a></p>
+  <img
+    src="https://img.freepik.com/free-photo/a-cupcake-with-a-strawberry-on-top-and-a-strawberry-on-the-top_1340-35087.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1699228800&semt=sph">
+  <h6>список нумерованный</h6>
+  <ol>
+    <li>1c</li>
+    <li>браузер яндекс</li>
+    <li>браузер хром</li>
+  </ol>
+  <h6>список маркированный</h6>
+  <ul>
+    <li>мясо</li>
+    <li>овощи</li>
+    <li>фрукты</li>
+  </ul>
+  <h3>таблица</h3>
+  <style type="text/css">
+    TABLE {
+      background: rgb(94, 5, 5);
+      border: 2px solid rgb(230, 2, 238);
+      border-collapse: collapse;
+      color: white;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      font-size: 14px;
+    }
+
+    caption {
+      caption-side: bottom;
+      text-align: center;
+      padding: 6px 0;
+      font-size: 16px;
+    }
+
+    TD {
+      background: rgb(73, 73, 126);
+      border: 1px solid black;
+      padding: 9px 8px;
+    }
+
+    th {
+      border: 2px solid black;
+      padding: 9px 8px;
+    }
+  </style>
+  <table>
+    <caption>Аптеки</caption>
+    <tr>
+      <th>№ п/п</th>
+      <th>Адрес</th>
+      <th>Префикс</th>
+      <th>Режим работы</th>
+      <th>Телефон</th>
+    </tr>
+    <tr>
+      <td>1.</td>
+      <td>Амгу, Арсеньева ул., 1</td>
+      <td>GZ</td>
+      <td>пн-пт 09:00 - 17:00 сб-вс выходной</td>
+      <td>8(902)066-50-65</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Арсеньев, 25 лет Арсеньеву ул., 1</td>
+      <td>VJ</td>
+      <td>пн-пт 08:00 - 20:00 сб-вс 09:00 - 18:00</td>
+      <td>8(42361)3-29-57</td>
+    </tr>
+    <tr>
+      <td>3.</td>
+      <td>Арсеньев, Островского ул., 1 </td>
+      <td>FL</td>
+      <td>пн-вс 08:00 - 19:00</td>
+      <td>8(42361)4-41-13</td>
+    </tr>
+    <tr>
+      <td>4.</td>
+      <td>В-Александровское, Комсомольская ул., 47</td>
+      <td>OV</td>
+      <td>пн-вс 09:00 - 22:00 </td>
+      <td>8(42335)4-31-75</td>
+    </tr>
+    <tr>
+      <td colspan="4" style="text-align:center">ИТОГО:</td>
+      <td>3 аптеки</td>
+    </tr>
+  </table>
+
+  <h2>форма для отправки</h2>
+  <form action="https://www.google.com/search" method="get">
+    <input type="text" name="q" placeholder ="Введите текст для поиска"> 
+    <input type="submit" value="Найти">
+  </form>
+
+</body>
 
 
 </html>
