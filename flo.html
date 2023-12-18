@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flower of Life</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="500" height="500"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 20;
+    const angle = Math.PI / 3;
+
+    ctx.rect(0, 0, 1000, 1000);
+    ctx.fillStyle = '#FEF7DA';
+    ctx.fill();
+    ctx.lineWidth = 3;
+
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 230, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 215, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    let k = 9;
+    let g = 1;
+    while (k > 2){
+        for (let j = 1; j < k; j++) {
+            for (let i = 0; i <= 6; i++) {
+                const x = centerX + g * radius * Math.cos(i * angle);
+                const y = centerY + g * radius * Math.sin(i * angle);
+                ctx.beginPath();
+                ctx.arc(x + j * radius, y, radius, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+        for (let j = 1; j < k; j++) {
+            for (let i = 0; i < 6; i++) {
+                const x = centerX + g * radius * Math.cos(i * angle);
+                const y = centerY + g * radius * Math.sin(i * angle);
+                ctx.beginPath();
+                ctx.arc(x - j * radius, y, radius, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+        for (let j = 1; j <k; j++) {
+            for (let i = 0; i < 6; i++) {
+                const x = centerX + g * radius * Math.cos(i * angle);
+                const y = centerY + g * radius * Math.sin(i * angle);
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+        k--;
+        g++;
+
+    }
+
+
+</script>
+</body>
+</html>
